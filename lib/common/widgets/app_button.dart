@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import '../foundations/app_sizes.dart';
 
 class AppButton extends StatelessWidget {
-  final String title;
+  final String lable;
+  final VoidCallback? onClick;
   final bool isSecondary;
   const AppButton({
     Key? key,
-    required this.title,
+    required this.lable,
+    this.onClick,
     this.isSecondary = false,
   }) : super(key: key);
 
@@ -22,9 +24,9 @@ class AppButton extends StatelessWidget {
                   borderRadius: BorderRadius.circular(AppSizes.sizesBase03),
                 ),
               ),
-              onPressed: () {},
+              onPressed: onClick,
               child: Text(
-                title,
+                lable,
                 style: const TextStyle(
                   fontSize: AppSizes.sizesBase04,
                 ),
@@ -38,9 +40,9 @@ class AppButton extends StatelessWidget {
                   side: BorderSide(
                     color: Theme.of(context).primaryColor,
                   )),
-              onPressed: () {},
+              onPressed: onClick,
               child: Text(
-                title,
+                lable,
                 style: const TextStyle(
                   fontSize: AppSizes.sizesBase04,
                 ),
