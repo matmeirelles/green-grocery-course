@@ -1,11 +1,12 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:green_grocery_course/common/foundations/app_shapes.dart';
 import 'package:green_grocery_course/common/foundations/app_sizes.dart';
 import 'package:green_grocery_course/common/foundations/app_spacings.dart';
 import 'package:green_grocery_course/common/foundations/custom_colors.dart';
+import 'package:green_grocery_course/common/widgets/app_form.dart';
 import 'package:green_grocery_course/common/widgets/app_text_field.dart';
 import 'package:green_grocery_course/common/widgets/app_button.dart';
+import 'package:green_grocery_course/features/auth/presentation/screens/sign_up_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -69,88 +70,78 @@ class SignInScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  vertical: AppSpacings.spacingLayoutBase04,
-                  horizontal: AppSpacings.spacingLayoutBase05,
-                ),
-                decoration: const BoxDecoration(
-                  color: Color.fromRGBO(255, 255, 255, 1),
-                  borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(AppShapes.shapeBorderRadiusXLg),
+              AppForm(
+                children: <Widget>[
+                  const AppTextField(
+                    icon: Icons.email,
+                    label: 'email',
                   ),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: <Widget>[
-                    const AppTextField(
-                      borderRadius: AppSizes.sizesBase03,
-                      icon: Icons.email,
-                      label: 'email',
-                    ),
-                    const SizedBox(
-                      height: AppSpacings.spacingInnerBase04,
-                    ),
-                    const AppTextField(
-                      borderRadius: AppSizes.sizesBase03,
-                      icon: Icons.lock,
-                      label: 'senha',
-                      isSecret: true,
-                    ),
-                    const SizedBox(
-                      height: AppSpacings.spacingInnerBase04,
-                    ),
-                    const AppButton(title: 'Entrar'),
-                    const SizedBox(
-                      height: AppSpacings.spacingInnerBase04,
-                    ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: GestureDetector(
-                        onTap: () {},
-                        child: const Text(
-                          "Esqueceu a senha?",
-                          style: TextStyle(color: Colors.grey),
-                        ),
+                  const SizedBox(
+                    height: AppSpacings.spacingInnerBase04,
+                  ),
+                  const AppTextField(
+                    icon: Icons.lock,
+                    label: 'senha',
+                    isSecret: true,
+                  ),
+                  const SizedBox(
+                    height: AppSpacings.spacingInnerBase04,
+                  ),
+                  AppButton(
+                    lable: 'Entrar',
+                    onClick: () {},
+                  ),
+                  const SizedBox(
+                    height: AppSpacings.spacingInnerBase04,
+                  ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: const Text(
+                        "Esqueceu a senha?",
+                        style: TextStyle(color: Colors.grey),
                       ),
                     ),
-                    const SizedBox(
-                      height: AppSpacings.spacingInnerBase04,
-                    ),
-                    Row(
-                      children: const <Widget>[
-                        Expanded(
-                          child: Divider(
-                            color: Colors.grey,
-                          ),
+                  ),
+                  const SizedBox(
+                    height: AppSpacings.spacingInnerBase04,
+                  ),
+                  Row(
+                    children: const <Widget>[
+                      Expanded(
+                        child: Divider(
+                          color: Colors.grey,
                         ),
-                        SizedBox(
-                          width: AppSpacings.spacingInnerBase03,
+                      ),
+                      SizedBox(
+                        width: AppSpacings.spacingInnerBase03,
+                      ),
+                      Text('Ou'),
+                      SizedBox(
+                        width: AppSpacings.spacingInnerBase03,
+                      ),
+                      Expanded(
+                        child: Divider(
+                          color: Colors.grey,
                         ),
-                        Text('Ou'),
-                        SizedBox(
-                          width: AppSpacings.spacingInnerBase03,
-                        ),
-                        Expanded(
-                          child: Divider(
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: AppSpacings.spacingInnerBase04,
-                    ),
-                    const AppButton(
-                      title: 'Criar conta',
-                      isSecondary: true,
-                    ),
-                    const SizedBox(
-                      height: AppSpacings.spacingInnerBase04,
-                    ),
-                  ],
-                ),
-              ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: AppSpacings.spacingInnerBase04,
+                  ),
+                  AppButton(
+                    lable: 'Criar conta',
+                    onClick: () =>
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SignUpScreen())),
+                    isSecondary: true,
+                  ),
+                  const SizedBox(
+                    height: AppSpacings.spacingInnerBase04,
+                  ),
+                ],
+              )
             ],
           ),
         ),

@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../foundations/app_sizes.dart';
+
 class AppTextField extends StatefulWidget {
-  final double borderRadius;
   final IconData? icon;
   final String? label;
   final bool isSecret;
   final TextInputType keyboardType;
-  const AppTextField(
-      {Key? key,
-      this.borderRadius = 0.0,
-      this.icon,
-      this.label,
-      this.isSecret = false,
-      this.keyboardType = TextInputType.text})
+  const AppTextField({Key? key, this.icon, this.label, this.isSecret = false, this.keyboardType = TextInputType.text})
       : super(key: key);
 
   @override
@@ -48,7 +43,7 @@ class _AppTextFieldState extends State<AppTextField> {
             : null,
         labelText: widget.label,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(widget.borderRadius),
+          borderRadius: BorderRadius.circular(AppSizes.sizesBase03),
         ),
       ),
     );
