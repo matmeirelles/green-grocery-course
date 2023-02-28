@@ -23,8 +23,10 @@ class AppForm extends StatelessWidget {
           top: Radius.circular(AppShapes.shapeBorderRadiusXLg),
         ),
       ),
+      alignment: Alignment.bottomCenter,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: children,
       ),
     );

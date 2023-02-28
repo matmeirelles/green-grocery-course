@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../foundations/app_sizes.dart';
 
@@ -7,8 +8,15 @@ class AppTextField extends StatefulWidget {
   final String? label;
   final bool isSecret;
   final TextInputType keyboardType;
-  const AppTextField({Key? key, this.icon, this.label, this.isSecret = false, this.keyboardType = TextInputType.text})
-      : super(key: key);
+  final List<TextInputFormatter>? inputFormatters;
+  const AppTextField({
+    Key? key,
+    this.icon,
+    this.label,
+    this.isSecret = false,
+    this.keyboardType = TextInputType.text,
+    this.inputFormatters,
+  }) : super(key: key);
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();
@@ -28,6 +36,7 @@ class _AppTextFieldState extends State<AppTextField> {
     return TextFormField(
       obscureText: hideText!,
       keyboardType: widget.keyboardType,
+      inputFormatters: widget.inputFormatters,
       decoration: InputDecoration(
         isDense: true,
         prefixIcon: widget.icon != null ? Icon(widget.icon) : null,
