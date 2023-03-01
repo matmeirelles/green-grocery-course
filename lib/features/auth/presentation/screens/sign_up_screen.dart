@@ -64,6 +64,7 @@ class SignUpScreen extends StatelessWidget {
                         label: 'celular',
                         icon: Icons.phone,
                         inputFormatters: [AppFormatters.phoneFormatter],
+                        keyboardType: TextInputType.number,
                       ),
                       const SizedBox(
                         height: AppSpacings.spacingInnerBase04,
@@ -72,6 +73,7 @@ class SignUpScreen extends StatelessWidget {
                         label: 'cpf',
                         icon: Icons.contact_page,
                         inputFormatters: [AppFormatters.cpfFormatter],
+                        keyboardType: TextInputType.number,
                       ),
                       const SizedBox(
                         height: AppSpacings.spacingInnerBase04,
