@@ -15,6 +15,6 @@ const Map<int, Color> _swatchOpacity = {
 
 abstract class CustomColors {
   static Color primaryColor = Colors.green.shade800;
-  static Color secondaryColor = Colors.red.shade600;
+  static Color secondaryColor = Colors.brown.shade600;
   static const MaterialColor customColorSwatch = MaterialColor(0xFF2e7d32, _swatchOpacity);
 }

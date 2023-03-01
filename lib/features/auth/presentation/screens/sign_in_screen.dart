@@ -2,11 +2,12 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:green_grocery_course/common/foundations/app_sizes.dart';
 import 'package:green_grocery_course/common/foundations/app_spacings.dart';
-import 'package:green_grocery_course/common/foundations/custom_colors.dart';
 import 'package:green_grocery_course/common/widgets/app_form.dart';
+import 'package:green_grocery_course/common/widgets/app_logo_title.dart';
 import 'package:green_grocery_course/common/widgets/app_text_field.dart';
 import 'package:green_grocery_course/common/widgets/app_button.dart';
 import 'package:green_grocery_course/features/auth/presentation/screens/sign_up_screen.dart';
+import 'package:green_grocery_course/features/base/presentation/screens/base_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -15,7 +16,6 @@ class SignInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
       body: SingleChildScrollView(
         child: SizedBox(
           height: size.height,
@@ -27,25 +27,9 @@ class SignInScreen extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text.rich(TextSpan(
-                        style: const TextStyle(
-                          fontSize: AppSizes.sizesBase10,
-                        ),
-                        children: [
-                          const TextSpan(
-                            text: 'Green',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                          TextSpan(
-                            text: 'grocer',
-                            style: TextStyle(
-                              color: CustomColors.secondaryColor,
-                            ),
-                          )
-                        ],
-                      )),
+                      const AppLogoTitle(
+                        fontSize: AppSizes.sizesBase10,
+                      ),
                       SizedBox(
                         height: AppSizes.sizesBase06,
                         child: DefaultTextStyle(
@@ -89,7 +73,10 @@ class SignInScreen extends StatelessWidget {
                   ),
                   AppButton(
                     lable: 'Entrar',
-                    onClick: () {},
+                    onClick: () {
+                      Navigator.of(context)
+                          .pushReplacement(MaterialPageRoute(builder: (context) => const BaseScreen()));
+                    },
                   ),
                   const SizedBox(
                     height: AppSpacings.spacingInnerBase04,
