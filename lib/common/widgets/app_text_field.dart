@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import '../foundations/app_sizes.dart';
+import 'package:green_grocery_course/common/foundations/app_shapes.dart';
 
 class AppTextField extends StatefulWidget {
   final IconData? icon;
@@ -52,7 +51,7 @@ class _AppTextFieldState extends State<AppTextField> {
             : null,
         labelText: widget.label,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(AppSizes.sizesBase03),
+          borderRadius: BorderRadius.circular(AppShapes.shapeBorderRadiusMd),
         ),
       ),
     );

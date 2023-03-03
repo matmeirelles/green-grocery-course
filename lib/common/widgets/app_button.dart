@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:green_grocery_course/common/foundations/app_shapes.dart';
 
 import '../foundations/app_sizes.dart';
 
@@ -21,7 +22,7 @@ class AppButton extends StatelessWidget {
           ? ElevatedButton(
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(AppSizes.sizesBase03),
+                  borderRadius: BorderRadius.circular(AppShapes.shapeBorderRadiusMd),
                 ),
               ),
               onPressed: onClick,
@@ -35,7 +36,7 @@ class AppButton extends StatelessWidget {
           : OutlinedButton(
               style: OutlinedButton.styleFrom(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(AppSizes.sizesBase03),
+                    borderRadius: BorderRadius.circular(AppShapes.shapeBorderRadiusMd),
                   ),
                   side: BorderSide(
                     color: Theme.of(context).primaryColor,
