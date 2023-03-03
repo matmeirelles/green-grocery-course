@@ -3,6 +3,8 @@ import 'package:green_grocery_course/common/foundations/app_spacings.dart';
 import 'package:green_grocery_course/common/widgets/app_logo_title.dart';
 
 import '../../../../common/foundations/app_sizes.dart';
+import '../../../../common/widgets/app_search_text_field.dart';
+import '../widgets/search_categories.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,25 +12,47 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        title: const AppLogoTitle(fontSize: AppSizes.sizesBase08),
-        actions: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(right: AppSpacings.spacingInnerBase02),
-            child: IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.shopping_cart,
-                )),
-          )
-        ],
-      ),
-      body: Container(
-        color: Theme.of(context).primaryColor,
-      ),
-    );
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          title: const AppLogoTitle(fontSize: AppSizes.sizesBase08),
+          actions: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(right: AppSpacings.spacingInnerBase06),
+              child: InkWell(
+                //TODO: Verificar como alterar o formato do InkWell para um círculo
+                borderRadius: BorderRadius.circular(16),
+                onTap: () {},
+                child: const Center(
+                  child: Badge(
+                    label: Text('10'),
+                    child: Icon(
+                      Icons.shopping_cart,
+                    ),
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
+        body: Column(
+          children: <Widget>[
+            const Padding(
+              padding: EdgeInsets.only(
+                  top: AppSpacings.spacingLayoutBase,
+                  left: AppSpacings.spacingLayoutBase03,
+                  right: AppSpacings.spacingLayoutBase03),
+              child: AppSearchTextField(),
+            ),
+            const SizedBox(
+              height: AppSpacings.spacingInnerBase,
+            ),
+            SearchCategories(),
+            const SizedBox(
+              height: AppSpacings.spacingInnerBase,
+            ),
+          ],
+        ));
   }
 }
