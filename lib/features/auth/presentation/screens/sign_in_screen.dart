@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:green_grocery_course/common/consts/app_categories.dart';
 import 'package:green_grocery_course/common/foundations/app_sizes.dart';
 import 'package:green_grocery_course/common/foundations/app_spacings.dart';
 import 'package:green_grocery_course/common/widgets/app_form.dart';
@@ -37,16 +38,7 @@ class SignInScreen extends StatelessWidget {
                           child: AnimatedTextKit(
                             pause: Duration.zero,
                             repeatForever: true,
-                            animatedTexts: [
-                              FadeAnimatedText('Frutas'),
-                              FadeAnimatedText('Carnes'),
-                              FadeAnimatedText('Verduras'),
-                              FadeAnimatedText('Legumes'),
-                              FadeAnimatedText('Cereais'),
-                              FadeAnimatedText('Laticínios'),
-                              FadeAnimatedText('Frios'),
-                              FadeAnimatedText('Orgânicos'),
-                            ],
+                            animatedTexts: _getAnimatedTexts(),
                           ),
                         ),
                       ),
@@ -134,5 +126,13 @@ class SignInScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  List<AnimatedText> _getAnimatedTexts() {
+    final List<AnimatedText> animatedTexts = [];
+    for (String category in AppCategories.categories) {
+      animatedTexts.add(FadeAnimatedText(category));
+    }
+    return animatedTexts;
   }
 }
