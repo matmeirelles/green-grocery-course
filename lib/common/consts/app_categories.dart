@@ -1,10 +1,10 @@
 class AppCategories {
   static const List<String> categories = [
-    'Frutas',
-    'Legumes',
-    'Grãos',
-    'Verduras',
-    'Carnes',
-    'Cereais',
+    'Fruit',
+    'Vegetable',
+    'Grain',
+    'Greenery',
+    'Meat',
+    'Cereal',
   ];
 }
