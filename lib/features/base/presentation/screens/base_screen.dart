@@ -50,15 +50,15 @@ class _BaseScreenState extends State<BaseScreen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),
-            label: 'Carrinho',
+            label: 'Cart',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.list),
-            label: 'Pedidos',
+            label: 'Requests',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Cliente',
+            label: 'Client',
           ),
         ],
       ),

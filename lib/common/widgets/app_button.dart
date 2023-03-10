@@ -4,12 +4,12 @@ import 'package:green_grocery_course/common/foundations/app_shapes.dart';
 import '../foundations/app_sizes.dart';
 
 class AppButton extends StatelessWidget {
-  final String lable;
+  final String label;
   final VoidCallback? onClick;
   final bool isSecondary;
   const AppButton({
     Key? key,
-    required this.lable,
+    required this.label,
     this.onClick,
     this.isSecondary = false,
   }) : super(key: key);
@@ -27,7 +27,7 @@ class AppButton extends StatelessWidget {
               ),
               onPressed: onClick,
               child: Text(
-                lable,
+                label,
                 style: const TextStyle(
                   fontSize: AppSizes.sizesBase04,
                 ),
@@ -43,7 +43,7 @@ class AppButton extends StatelessWidget {
                   )),
               onPressed: onClick,
               child: Text(
-                lable,
+                label,
                 style: const TextStyle(
                   fontSize: AppSizes.sizesBase04,
                 ),

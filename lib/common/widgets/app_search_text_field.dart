@@ -12,7 +12,7 @@ class AppSearchTextField extends StatelessWidget {
       decoration: InputDecoration(
         filled: true,
         fillColor: Colors.white,
-        hintText: 'Pesquise aqui',
+        hintText: 'Search here',
         hintStyle: TextStyle(
           color: CustomColors.secondaryColor,
         ),
@@ -21,11 +21,15 @@ class AppSearchTextField extends StatelessWidget {
           color: CustomColors.secondaryColor,
         ),
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(
-            AppShapes.shapeBorderRadiusLg,
-          ),
-        ),
+            borderRadius: BorderRadius.circular(
+              AppShapes.shapeBorderRadiusLg,
+            ),
+            borderSide: const BorderSide(
+              width: 0,
+              style: BorderStyle.none,
+            )),
       ),
+      keyboardType: TextInputType.text,
     );
   }
 }

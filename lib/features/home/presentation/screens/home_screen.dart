@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: AppSpacings.spacingInnerBase06),
               child: InkWell(
-                //TODO: Verificar como alterar o formato do InkWell para um círculo
+                //TODO: Change InkWell format to a circle
                 borderRadius: BorderRadius.circular(16),
                 onTap: () {},
                 child: const Center(
@@ -41,8 +41,8 @@ class HomeScreen extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.only(
                   top: AppSpacings.spacingLayoutBase,
-                  left: AppSpacings.spacingLayoutBase03,
-                  right: AppSpacings.spacingLayoutBase03),
+                  left: AppSpacings.spacingLayoutBase02,
+                  right: AppSpacings.spacingLayoutBase02),
               child: AppSearchTextField(),
             ),
             const SizedBox(

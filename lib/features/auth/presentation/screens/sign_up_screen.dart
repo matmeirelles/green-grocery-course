@@ -79,7 +79,7 @@ class SignUpScreen extends StatelessWidget {
                         height: AppSpacings.spacingInnerBase04,
                       ),
                       AppButton(
-                        lable: 'Cadastrar usuário',
+                        label: 'Cadastrar usuário',
                         onClick: () {},
                       ),
                       const SizedBox(

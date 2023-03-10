@@ -72,7 +72,7 @@ class SignInScreen extends StatelessWidget {
                     height: AppSpacings.spacingInnerBase04,
                   ),
                   AppButton(
-                    lable: 'Entrar',
+                    label: 'Entrar',
                     onClick: () {
                       Navigator.of(context)
                           .pushReplacement(MaterialPageRoute(builder: (context) => const BaseScreen()));
@@ -94,8 +94,8 @@ class SignInScreen extends StatelessWidget {
                   const SizedBox(
                     height: AppSpacings.spacingInnerBase04,
                   ),
-                  Row(
-                    children: const <Widget>[
+                  const Row(
+                    children: <Widget>[
                       Expanded(
                         child: Divider(
                           color: Colors.grey,
@@ -119,7 +119,7 @@ class SignInScreen extends StatelessWidget {
                     height: AppSpacings.spacingInnerBase04,
                   ),
                   AppButton(
-                    lable: 'Criar conta',
+                    label: 'Criar conta',
                     onClick: () =>
                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SignUpScreen())),
                     isSecondary: true,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:green_grocery_course/common/foundations/custom_colors.dart';
 
 import '../../../../common/foundations/app_shapes.dart';
 import '../../../../common/foundations/app_sizes.dart';
