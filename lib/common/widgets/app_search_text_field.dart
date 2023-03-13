@@ -10,6 +10,7 @@ class AppSearchTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
+        isDense: true,
         filled: true,
         fillColor: Colors.white,
         hintText: 'Search here',
