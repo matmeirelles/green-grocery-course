@@ -34,7 +34,10 @@ class SignInScreen extends StatelessWidget {
                       SizedBox(
                         height: AppSizes.sizesBase06,
                         child: DefaultTextStyle(
-                          style: const TextStyle(fontSize: AppSizes.sizesBase05, color: Colors.white),
+                          style: const TextStyle(
+                            fontSize: AppSizes.sizesBase05,
+                            color: Colors.white,
+                          ),
                           child: AnimatedTextKit(
                             pause: Duration.zero,
                             repeatForever: true,

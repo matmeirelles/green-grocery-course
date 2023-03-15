@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:green_grocery_course/common/foundations/app_spacings.dart';
-import 'package:green_grocery_course/common/services/util_services.dart';
 import 'package:green_grocery_course/common/widgets/app_logo_title.dart';
 import 'package:green_grocery_course/features/home/presentation/widgets/item_grid.dart';
 
