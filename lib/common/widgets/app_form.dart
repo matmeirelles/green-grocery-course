@@ -24,10 +24,13 @@ class AppForm extends StatelessWidget {
         ),
       ),
       alignment: Alignment.bottomCenter,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: children,
+      child: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: children,
+        ),
       ),
     );
   }
